@@ -9,6 +9,7 @@ on:
     branches: [ master ]
   #release:
   #  types: [published]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -26,7 +27,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-20.04, windows-latest, macOS-12]
+        # os: [ubuntu-20.04, windows-latest, macOS-12]
+        os: [ubuntu-20.04, windows-latest]
         python_version: [3.8]
         node_version: [16]
         skip_rust: [false]
